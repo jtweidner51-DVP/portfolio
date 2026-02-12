@@ -1,16 +1,60 @@
-# React + Vite
+# Janek Weidner — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Janek Weidner — innovation leader, digital transformation strategist, and full-stack developer.
 
-Currently, two official plugins are available:
+**Live site:** Deployed via Netlify
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
 
-## React Compiler
+A modern, single-page portfolio built with React and Vite, featuring:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Responsive design with mobile-first approach
+- Dark/light theme toggle
+- CSS Modules for scoped, maintainable styling
+- Smooth scroll navigation with active section highlighting
+- Animated counters and interactive force graph
+- Accessibility features including skip navigation and reduced motion support
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Framework:** React 19
+- **Build Tool:** Vite 7
+- **Styling:** CSS Modules
+- **Linting:** ESLint 9
+- **Deployment:** Netlify
+
+## Project Structure
+
+    src/
+    ├── components/
+    │   ├── layout/       # Nav, Footer, Section, SkipLink
+    │   ├── sections/     # Hero, About, Experience, Skills, Projects, Stats, Contact
+    │   └── ui/           # Button, Card, Badge, ThemeToggle, ForceGraph, etc.
+    ├── data/             # Site content and metadata
+    ├── hooks/            # Custom React hooks (theme, scroll spy, media queries)
+    ├── App.jsx
+    ├── index.css
+    └── main.jsx
+
+## Getting Started
+
+    # Install dependencies
+    npm install
+
+    # Start dev server
+    npm run dev
+
+    # Build for production
+    npm run build
+
+    # Preview production build
+    npm run preview
+
+## Author
+
+**Janek Weidner, CITP**
+MBA (University of Wales) · BSc Computer Science (Cardiff University)
+
+- [LinkedIn](https://www.linkedin.com/in/janek-weidner-citp/)
+- [GitHub](https://github.com/jtweidner51-DVP)
+
