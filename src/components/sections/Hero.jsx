@@ -40,7 +40,7 @@ function Hero() {
           />
         </div>
 
-        <h1 className={styles.title}>{siteMetadata.name}</h1>
+        <h1 className={styles.title}>{siteMetadata.name} <span className={styles.postNominal}>CITP</span></h1>
         <p className={styles.subtitle}>{siteMetadata.title}</p>
 
         <div className={styles.ctas}>
