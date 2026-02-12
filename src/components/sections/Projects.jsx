@@ -15,7 +15,7 @@ function Projects() {
     <Section
       id="projects"
       title="Projects"
-      subtitle="Learning by building. Each project represents a step in rebuilding my technical skills."
+      subtitle="Learning by building. Each project represents a step in my technical journey."
       withGrid
     >
       <div ref={ref} className={styles.grid}>
