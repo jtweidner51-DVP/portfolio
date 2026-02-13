@@ -5,7 +5,8 @@ export function useTheme() {
     if (typeof window === 'undefined') return 'dark'
     const stored = localStorage.getItem('portfolio-theme')
     if (stored) return stored
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+    return 'dark'  // Could check system preference here, but forcing dark for now
+    // like this:: return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
   })
 
   useEffect(() => {
