@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 'rag-demo',
     title: 'RAG Demo \u2014 Personal Knowledge Base',
-    description: 'A Retrieval-Augmented Generation pipeline that turns career documents into a searchable AI knowledge base. Ask natural language questions, get cited answers with confidence scores and cost tracking.',
+    description: 'A Retrieval-Augmented Generation pipeline- Feed it your career docs, ask it anything. It reads everything so you don't have to — complete with receipts, confidence scores, and a running bar tab',
     tech: ['Python', 'LangChain', 'ChromaDB', 'GPT-4 Turbo', 'OpenAI Embeddings'],
     liveUrl: null,
     githubUrl: 'https://github.com/jtweidner51-DVP/rag-demo',
@@ -12,7 +12,7 @@ export const projects = [
   {
     id: 'spider-crawler',
     title: 'SpiderCrawler',
-    description: 'Robot crawler for websites that visualizes content dependencies in a 3D graph with clickable nodes. Explores web scraping and data visualization techniques to help optimise content networks.',
+    description: 'Robot crawler for websites that visualizes content dependencies in a 3D graph with clickable nodes. Turns any website into a 3D galaxy of connected pages you can spin, click and explore. Part web scraper, part data viz, part excuse to play with 3D graphics.',
     tech: ['Python', 'Beautiful Soup', 'SQLite', 'D3.js visualisation'],
     liveUrl: null,
     githubUrl: 'https://github.com/jtweidner51-DVP/SpiderCrawler',
@@ -22,7 +22,7 @@ export const projects = [
   {
     id: 'photo-organizer',
     title: 'Photo Organizer',
-    description: 'Bulk media organizer for Amazon Photos that preserves timestamps from JSON metadata. Automates photo library migration workflows.',
+    description: 'Bulk media organizer for Amazon Photos that preserves timestamps from JSON metadata. Rescues your videos from Amazon's metadata graveyard. Restores timestamps, fixes filenames, and bulk-organizes thousands of files without losing a single memory.',
     tech: ['Python', 'JSON'],
     liveUrl: null,
     githubUrl: 'https://github.com/jtweidner51-DVP/Utils',
