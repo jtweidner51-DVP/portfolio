@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 'rag-demo',
     title: 'RAG Demo \u2014 Personal Knowledge Base',
-    description: "A Retrieval-Augmented Generation pipeline- Feed it your career docs, ask it anything. It reads everything so you don't have to — complete with receipts, confidence scores, and a running bar tab",
+    description: "A Retrieval-Augmented Generation pipeline- Feed it your career docs, ask it anything. It reads everything so you don't have to — complete with receipts, confidence scores, and a running token tab.",
     tech: ['Python', 'LangChain', 'ChromaDB', 'GPT-4 Turbo', 'OpenAI Embeddings'],
     liveUrl: null,
     githubUrl: 'https://github.com/jtweidner51-DVP/rag-demo',
@@ -32,7 +32,7 @@ export const projects = [
   {
     id: 'markets-webapp',
     title: 'Markets Web App',
-    description: 'Full-featured shopping platform for a simple web shopping experience. Built with Django to explore e-commerce workflows and database relationships.',
+    description: 'A proper little online shop — browse, cart, checkout, tags and favourites. Built with Django to crack open how e-commerce actually works under the hood.',
     tech: ['Python', 'Django', 'SQLite', 'CSS'],
     liveUrl: null,
     githubUrl: 'https://github.com/jtweidner51-DVP/markets-webapp',
@@ -42,7 +42,7 @@ export const projects = [
   {
     id: 'portfolio',
     title: 'This Portfolio Site',
-    description: 'Built with React and Vite while learning modern frontend development. Demonstrates component architecture, CSS animations, and responsive design.',
+    description: "The site you're looking at right now. Built from scratch with React and Vite as a crash course in modern frontend — animations, components, and all the responsive bits. Claude then reviewed and optimised my design for a vibe coding experiment,",
     tech: ['React', 'JavaScript', 'CSS', 'Vite'],
     liveUrl: null,
     githubUrl: 'https://github.com/jtweidner51-DVP/portfolio',
