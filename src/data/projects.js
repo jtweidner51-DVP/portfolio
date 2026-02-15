@@ -42,7 +42,7 @@ export const projects = [
   {
     id: 'portfolio',
     title: 'This Portfolio Site',
-    description: "The site you're looking at right now. Built from scratch with React and Vite as a crash course in modern frontend — animations, components, and all the responsive bits. Claude then reviewed and optimised my design for a vibe coding experiment,",
+    description: "The site you're looking at right now. Built from scratch with React and Vite as a crash course in modern frontend — animations, components, and all the responsive bits. Claude then reviewed and optimised my design as a vibe coding experiment- added some lovely animations to the stats section.",
     tech: ['React', 'JavaScript', 'CSS', 'Vite'],
     liveUrl: null,
     githubUrl: 'https://github.com/jtweidner51-DVP/portfolio',
