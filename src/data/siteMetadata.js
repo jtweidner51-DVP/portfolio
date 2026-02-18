@@ -1,7 +1,7 @@
 export const siteMetadata = {
   name: 'Janek Weidner',
   title: 'Innovation Leader | Digital Transformation | Full-Stack Developer',
-  statusLine: 'Currently: Open to full-stack dev leader roles tackling the climate crisis | React \u2022 Python \u2022 Energy sector veteran',
+  statusLine: 'Currently: Open to leadership roles that tackle climate change | NET Zero \u2022 Python \u2022 Energy sector veteran',
   tagline: 'Tackling net zero, one line of code at a time.',
   about: {
     lead: 'Three decades at the intersection of technology and transformation.',
