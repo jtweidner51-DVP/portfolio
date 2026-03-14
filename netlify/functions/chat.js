@@ -1,9 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { readFileSync, existsSync } from 'fs'
-import { join, dirname } from 'path'
-import { fileURLToPath } from 'url'
-
-const __dirname = dirname(fileURLToPath(import.meta.url))
+import { join } from 'path'
 
 // ---------------------------------------------------------------------------
 // Load all /docs files once at cold start
@@ -20,7 +17,7 @@ const DOC_FILES = [
 ]
 
 function loadDocs() {
-  const docsRoot = join(__dirname, '../../docs')
+  const docsRoot = join(process.cwd(), 'docs')
   return DOC_FILES
     .map(({ label, path }) => {
       const fullPath = join(docsRoot, path)
