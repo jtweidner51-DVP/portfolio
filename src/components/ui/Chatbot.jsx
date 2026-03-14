@@ -1,8 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
-import { systemPrompt } from '../../data/systemPrompt'
 import styles from './Chatbot.module.css'
 
-const API_KEY = import.meta.env.VITE_ANTHROPIC_API_KEY
 const MODEL = 'claude-sonnet-4-6'
 const MAX_TOKENS = 1024
 
@@ -80,64 +78,26 @@ export default function Chatbot() {
     abortRef.current = new AbortController()
 
     try {
-      const response = await fetch('https://api.anthropic.com/v1/messages', {
+      const response = await fetch('/.netlify/functions/chat', {
         method: 'POST',
         signal: abortRef.current.signal,
-        headers: {
-          'x-api-key': API_KEY,
-          'anthropic-version': '2023-06-01',
-          'anthropic-dangerous-direct-browser-access': 'true',
-          'content-type': 'application/json',
-        },
+        headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
-          model: MODEL,
-          max_tokens: MAX_TOKENS,
-          stream: true,
-          system: systemPrompt,
-          messages: newMessages.map(({ role, content }) => ({ role, content })),
+          message: userText,
+          history: messages.map(({ role, content }) => ({ role, content })),
         }),
       })
 
       if (!response.ok) {
         const err = await response.json().catch(() => ({}))
-        throw new Error(err?.error?.message || `API error ${response.status}`)
+        throw new Error(err?.error || `API error ${response.status}`)
       }
 
-      const reader = response.body.getReader()
-      const decoder = new TextDecoder()
-      let accumulated = ''
-
-      while (true) {
-        const { done, value } = await reader.read()
-        if (done) break
-
-        const chunk = decoder.decode(value, { stream: true })
-        const lines = chunk.split('\n')
-
-        for (const line of lines) {
-          if (!line.startsWith('data: ')) continue
-          const data = line.slice(6).trim()
-          if (data === '[DONE]') continue
-
-          try {
-            const parsed = JSON.parse(data)
-            if (parsed.type === 'content_block_delta' && parsed.delta?.type === 'text_delta') {
-              accumulated += parsed.delta.text
-              setMessages(msgs => {
-                const updated = [...msgs]
-                updated[assistantIndex] = { role: 'assistant', content: accumulated, streaming: true }
-                return updated
-              })
-            }
-          } catch {
-            // skip malformed SSE lines
-          }
-        }
-      }
+      const { reply } = await response.json()
 
       setMessages(msgs => {
         const updated = [...msgs]
-        updated[assistantIndex] = { role: 'assistant', content: accumulated, streaming: false }
+        updated[assistantIndex] = { role: 'assistant', content: reply, streaming: false }
         return updated
       })
     } catch (err) {

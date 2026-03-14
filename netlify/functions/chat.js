@@ -61,9 +61,6 @@ ${docsContent}
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY?.trim() })
 
 export const handler = async (event) => {
-  const key = process.env.ANTHROPIC_API_KEY
-  console.log('DEBUG key:', key ? `"${key.slice(0,12)}..." (len=${key.length})` : 'UNDEFINED')
-
   // Handle CORS preflight
   if (event.httpMethod === 'OPTIONS') {
     return {
