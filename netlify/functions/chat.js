@@ -58,7 +58,7 @@ ${docsContent}
 // Netlify function handler
 // ---------------------------------------------------------------------------
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY?.trim() })
 
 export const handler = async (event) => {
   // Handle CORS preflight
