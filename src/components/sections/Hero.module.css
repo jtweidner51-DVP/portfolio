@@ -44,6 +44,10 @@
   z-index: 10;
   position: relative;
   animation: fadeInUp 1s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 @keyframes fadeInUp {
@@ -134,7 +138,7 @@
   margin-bottom: var(--space-2xl);
   color: var(--color-text-secondary);
   animation: fadeIn 1s ease-out 0.4s backwards;
-  padding-left: 5rem;
+  text-align: center;
 }
 
 .ctas {

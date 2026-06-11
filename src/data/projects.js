@@ -1,5 +1,15 @@
 export const projects = [
   {
+    id: 'ground-truth',
+    title: 'Ground Truth',
+    description: 'An AI-powered organisational diagnostic tool that helps organisations understand where their AI adoption is actually stalling — not where they think it is. Built as the product engine for SwiftLoop Associates, with iSAW International as the first distribution channel into the energy sector.',
+    tech: ['Python', 'Django', 'ChromaDB', 'Anthropic API', 'Vector Search'],
+    liveUrl: null,
+    githubUrl: null,
+    image: null,
+    liveDemo: false,
+  },
+  {
     id: 'rag-demo',
     title: 'RAG Demo \u2014 Personal Knowledge Base',
     description: "A Retrieval-Augmented Generation pipeline- Feed it your career docs, ask it anything. It reads everything so you don't have to — complete with receipts, confidence scores, and a running token tab.",
@@ -19,6 +29,7 @@ export const projects = [
     image: null,
     liveDemo: true,
   },
+  /*
   {
     id: 'photo-organizer',
     title: 'Photo Organizer',
@@ -29,6 +40,9 @@ export const projects = [
     image: '/images/projects/stampchamp.png',
     liveDemo: false,
   },
+  */
+
+
   {
     id: 'markets-webapp',
     title: 'Markets Web App',

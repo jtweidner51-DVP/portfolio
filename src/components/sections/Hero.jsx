@@ -58,7 +58,7 @@ function Hero() {
 
       {matrixActive && (
         <div className={styles.matrixMessage} aria-hidden="true">
-          <p>Unlocking NET ZERO through technology ...</p>
+          <p>From AI curiosity to AI capability ...</p>
           <p className={styles.matrixSub}>// 30 years of code compiled into leadership</p>
         </div>
       )}
