@@ -7,7 +7,7 @@ export const projects = [
     liveUrl: null,
     githubUrl: null,
     image: null,
-    liveDemo: false,
+    liveDemo: true,
   },
   {
     id: 'rag-demo',

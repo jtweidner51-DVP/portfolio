@@ -7,6 +7,7 @@ import { projects } from '../../data/projects'
 import { useInView } from '../../hooks/useInView'
 
 const ForceGraph = lazy(() => import('../ui/ForceGraph'))
+const GroundTruthGraph = lazy(() => import('../ui/GroundTruthGraph'))
 
 function Projects() {
   const [ref, isInView] = useInView()
@@ -27,7 +28,7 @@ function Projects() {
             <div className={styles.image}>
               {project.liveDemo ? (
                 <Suspense fallback={<div className={styles.graphPlaceholder}>Loading visualization...</div>}>
-                  <ForceGraph />
+                  {project.id === 'ground-truth' ? <GroundTruthGraph /> : <ForceGraph />}
                 </Suspense>
               ) : project.image ? (
                 <img
