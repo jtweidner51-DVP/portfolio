@@ -9,7 +9,7 @@ import Experience from './components/sections/Experience'
 import Projects from './components/sections/Projects'
 import Contact from './components/sections/Contact'
 import Footer from './components/layout/Footer'
-import Chatbot from './components/ui/Chatbot'
+// import Chatbot from './components/ui/Chatbot'
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      <Chatbot />
+        {/* <Chatbot /> */}
     </div>
   )
 }
